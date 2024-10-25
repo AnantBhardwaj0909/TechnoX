@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More About Solar Energy</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #000000, #461167);
+        }
+        header {
+            background: linear-gradient(to right, #000000, #461167);
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #2c061b;
+        }
+        section {
+            margin-bottom: 2em;
+            padding: 1em;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin: 1em 0;
+        }
+        .content {
+            display: none;
+            padding-top: 1em;
+        }
+        .content .p{
+            size: 60px;
+        }
+        .button {
+            color: #3a0a4d;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn More About Solar Energy</h1>
+        <p>Discover the power of the sun!</p>
+    </header>
+
+    <main>
+        <!-- What is Solar Energy -->
+        <section id="solar-energy">
+            <h2>What is Solar Energy?</h2>
+            <p><img src="solar8.jpeg" alt="Solar panels harnessing energy from the sun"></p>
+            <div class="content">
+                <p>Solar energy is the power obtained by harnessing the energy of the sun’s rays. This energy is renewable, meaning it is a sustainable source of energy that does not deplete over time. Solar panels convert sunlight into electricity, which can be used to power homes, businesses, and devices.</p>
+            </div>
+            <span class="button" onclick="toggleContent('solar-energy')">Learn More</span>
+        </section>
+
+        <!-- Benefits of Solar Energy -->
+        <section id="benefits">
+            <h2>Benefits of Solar Energy</h2>
+            <p><img src="solar4.jpeg" alt="Eco-friendly solar energy benefits"></p>
+            <div class="content">
+                <p>Solar energy offers numerous benefits, including reduced electricity bills, lower carbon footprint, and energy independence. It’s environmentally friendly, produces no pollution, and is one of the cleanest sources of energy available.</p>
+            </div>
+            <span class="button" onclick="toggleContent('benefits')">Learn More</span>
+        </section>
+
+        <!-- Growth of Solar Energy -->
+        <section id="growth">
+            <h2>Growth of Solar Energy</h2>
+            <p><img src="solar9.jpeg" alt="Growth of solar energy industry"></p>
+            <div class="content">
+                <p>The solar energy industry has seen rapid growth in recent years. Thanks to advancements in technology and the push for green energy, solar power has become more affordable and accessible. Countries worldwide are investing in solar infrastructure to reduce dependency on fossil fuels.</p>
+            </div>
+            <span class="button" onclick="toggleContent('growth')">Learn More</span>
+        </section>
+
+        <section id="landscape">
+            <h2>Current Energy Landscape</h2>
+            <p><img src="solar5.png" alt="Growth of solar energy industry"></p>
+            <div class="content">
+                <p>The current energy landscape is rapidly evolving as the world transitions from traditional fossil fuels to cleaner, more sustainable energy sources. </p>
+            </div>
+            <span class="button" onclick="toggleContent('growth')">Learn More</span>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript to toggle content display
+        function toggleContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = section.querySelector('.content');
+            const button = section.querySelector('.button');
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+            button.innerText = content.style.display === 'block' ? 'Show Less' : 'Learn More';
+        }
+    </script>
+</body>
+</html>

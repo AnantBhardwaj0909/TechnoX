@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Profile Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+   
+    body {
+      background-color: #f0f0f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+   
+    .container h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    
+    .container p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    
+    
+    .energy-profile-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .energy-profile-form label {
+      text-align: left;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+  
+    .energy-profile-form input,
+    .energy-profile-form select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+   
+    .radio-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .radio-group input {
+      margin-right: 5px;
+    }
+    
+   
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Welcome to Luminos</h2>
+    <p>Let's set up your energy profile</p>
+
+    <form class="energy-profile-form">
+      <label for="provider">* Current electricity provider</label>
+      <select id="provider" name="provider" required>
+        <option value="" disabled selected>Select your provider</option>
+                    <option value="Himachal Pradesh State Electricity Board Limited">Himachal Pradesh State Electricity Board Limited</option>
+                    <option value="Tata Power Delhi Distribution Limited">Tata Power Delhi Distribution Limited</option>
+                    <option value="BSES Rajdhani Power Limited">BSES Rajdhani Power Limited</option>
+                    <option value="BSES Yamuna Power Limited">BSES Yamuna Power Limited</option>
+                    <option value="New Delhi Municipal Corporation">New Delhi Municipal Corporation</option>
+                    <option value="Uttar Haryana Bijli Vitran Nigam">Uttar Haryana Bijli Vitran Nigam</option>
+                    <option value="Dakshin Haryana Bijli Vitran Nigam">Dakshin Haryana Bijli Vitran Nigam</option>
+                    <option value="Uttarakhand Power Corporation Limited">Uttarakhand Power Corporation Limited</option>
+                    <option value="Punjab State Power Corporation Limited">Punjab State Power Corporation Limited</option>
+                    <option value="Purvanchal Vidyut Vitran Nigam Ltd.">Purvanchal Vidyut Vitran Nigam Ltd.</option>
+                    <option value="Paschimanchal Vidyut Vitran Nigam Ltd.">Paschimanchal Vidyut Vitran Nigam Ltd.</option>
+                    <option value="Madhyanchal Vidyut Vitran Nigam Ltd.">Madhyanchal Vidyut Vitran Nigam Ltd.</option>
+                    <option value="Dhakshinanchal Vidyut Vitran Nigam Ltd.">Dhakshinanchal Vidyut Vitran Nigam Ltd.</option>
+                    <option value="Electricity Department, UT of Chandigarh">Electricity Department, UT of Chandigarh</option>
+                    <option value="Power Development Department Jammu & Kashmir">Power Development Department Jammu & Kashmir</option>
+                    <option value="Manipur State Power Distribution Company Ltd.">Manipur State Power Distribution Company Ltd.</option>
+                    <option value="Department of Power, Arunachal Pradesh">Department of Power, Arunachal Pradesh</option>
+                    <option value="Sikkim Power Development Corporation Limited">Sikkim Power Development Corporation Limited</option>
+                    <option value="Meghalaya Energy Corporation Limited">Meghalaya Energy Corporation Limited</option>
+                    <option value="Power & Electricity Department, Mizoram">Power & Electricity Department, Mizoram</option>
+                    <option value="North Bihar Power Distribution Company Limited">North Bihar Power Distribution Company Limited</option>
+                    <option value="South Bihar Power Distribution Company Limited">South Bihar Power Distribution Company Limited</option>
+                    <option value="Assam Power Distribution Company Limited">Assam Power Distribution Company Limited</option>
+                    <option value="Tripura State Electricity Corporation Limited">Tripura State Electricity Corporation Limited</option>
+                    <option value="Kerala State Electricity Board Limited">Kerala State Electricity Board Limited</option>
+                    <option value="Chamundeshwari Electricity Supply Corporation Limited">Chamundeshwari Electricity Supply Corporation Limited</option>
+                    <option value="Gulbarga Electricity Supply Company Limited">Gulbarga Electricity Supply Company Limited</option>
+                    <option value="Bangalore Electricity Supply Company Limited">Bangalore Electricity Supply Company Limited</option>
+                    <option value="Mangalore Electricity Supply Company Limited">Mangalore Electricity Supply Company Limited</option>
+                    <option value="Hubli Electricity Supply Company Limited">Hubli Electricity Supply Company Limited</option>
+                    <option value="Telangana State Southern Power Distribution Company Ltd">Telangana State Southern Power Distribution Company Ltd</option>
+                    <option value="Electricity Department, UT of Lakshadweep">Electricity Department, UT of Lakshadweep</option>
+                    <option value="Electricity Department, UT of Puducherry">Electricity Department, UT of Puducherry</option>
+      </select>
+
+      <label for="monthly-bill">* Average monthly electricity bill (₹)</label>
+      <input type="number" id="monthly-bill" name="monthly-bill" required placeholder="Enter amount">
+
+      <p style="margin-left: -140px;">* Do you have solar panels?</p>
+      <div class="radio-group">
+        <input type="radio" id="solar-yes" name="solar" value="yes" required>
+        <label for="solar-yes">Yes</label>
+
+        <input type="radio" id="solar-no" name="solar" value="no">
+        <label for="solar-no">No</label>
+      </div>
+
+      <label for="solar-capacity">* Solar system capacity (kW)</label>
+      <input type="number" id="solar-capacity" name="solar-capacity" placeholder="Enter capacity">
+
+      <label for="installation-date">* Installation date</label>
+      <input type="date" id="installation-date" name="installation-date" required>
+
+      <p style="margin-left: -130px;">* Do you have battery storage?</p>
+      <div class="radio-group">
+        <input type="radio" id="battery-yes" name="battery" value="yes" required>
+        <label for="battery-yes">Yes</label>
+
+        <input type="radio" id="battery-no" name="battery" value="no">
+        <label for="battery-no">No</label>
+      </div>
+
+      <button id="nextBtn" type="submit">Next</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('nextBtn').addEventListener('click', () => {
+    
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
